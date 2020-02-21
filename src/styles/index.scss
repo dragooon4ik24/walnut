@@ -1,0 +1,15 @@
+@import '~normalize.css';
+@import './_base.scss';
+@import './_fonts.scss';
+@import './_variables.scss';
+@import './_mixins.scss';
+@import './_partials.scss';
+
+@import './components/Header.scss';
+@import './components/Navigation.scss';
+@import './components/Form.scss';
+@import './components/Info.scss';
+@import './components/SideMenu.scss';
+@import './components/Modals.scss';
+@import './components/Application.scss';
+@import './components/Success.scss';

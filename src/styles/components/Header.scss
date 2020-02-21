@@ -1,0 +1,77 @@
+.Header {
+  position: relative;
+
+  padding-top: 27px;
+  padding-bottom: 88px;
+
+  font-family: Montserrat, sans-serif;
+  font-weight: normal;
+  color: white;
+
+  background: url('./assets/img/banner-bg-mobile.jpg') center 0 no-repeat;
+  background-size: cover;
+
+  @include tablet {
+    padding-bottom: 52px;
+
+    background-image: url('./assets/img/banner-bg-tablet.jpg');
+  }
+
+  @include desktop {
+    padding-bottom: 108px;
+
+    background-image: url('./assets/img/banner-bg-desktop.jpg');
+  }
+}
+
+.Header-Title,
+.Header-Whom {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.Header-Title {
+  margin-bottom: 12px;
+
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 900;
+  color: $color_yellow;
+
+  @include tablet {
+    margin-bottom: 10px;
+
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  @include desktop {
+    font-size: 64px;
+    line-height: 64px;
+  }
+}
+
+.Header-Whom {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 38px;
+
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  font-weight: bold;
+
+  @include tablet {
+    width: auto;
+    margin-bottom: 18px;
+
+    font-size: 21px;
+  }
+
+  @include desktop {
+    margin-bottom: 68px;
+
+    font-size: 40px;
+    line-height: 56px;
+  }
+}

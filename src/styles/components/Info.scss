@@ -1,0 +1,39 @@
+.Info {
+  display: none;
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 27px;
+
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+.Info-Email {
+  padding-bottom: 5px;
+
+  color: $color_blue;
+  font-weight: bold;
+
+  border-bottom: 1px dotted $color_blue;
+
+  &:hover {
+    color: $color_yellow;
+    border-color: $color_yellow
+  }
+}
+
+.Info-Button {
+  padding: 0;
+  padding-bottom: 5px;
+  color: $color_blue;
+
+  border-bottom: 1px dotted $color_blue;
+
+  &:hover {
+    color: $color_yellow;
+    border-color: $color_yellow
+  }
+}

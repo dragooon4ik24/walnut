@@ -1,0 +1,122 @@
+.SideMenu {
+  @include desktop {
+    display: none;
+  }
+}
+
+.SideMenu-Content {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 310px;
+  height: 100%;
+  padding: 0 27px;
+
+  font-size: 12px;
+  line-height: 16px;
+
+  transform: translateX(-100%);
+  background-color: white;
+  z-index: 100;
+
+  .Overlay_shown & {
+    transform: translateX(0);
+    transition: transform 0.2s;
+  }
+
+  .Overlay_hide & {
+    transform: translateX(-100%);
+    transition: transform 0.2s;
+  }
+}
+
+.SideMenu-Info {
+  color: black;
+}
+
+.SideMenu-Close {
+  position: absolute;
+  right: 27px;
+  top: 21px;
+
+  &::before {
+    background-color: $color_gray;
+  }
+
+  &::after {
+    background-color: $color_gray;
+  }
+}
+
+.SideMenu-List {
+  padding: 55px 0 35px;
+
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.SideMenu-List a {
+  &:hover {
+    color: $color_yellow;
+  }
+}
+
+.SideMenu-List li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.SideMenu-Time,
+.SideMenu-Suggestion {
+  margin-bottom: 20px;
+}
+
+.SideMenu-BackCall {
+  margin-bottom: 27px;
+}
+
+.SideMenu-WhatsApp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px 11px;
+
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+
+  background-color: $color_button-black;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: $color_button-gray;
+  }
+}
+
+.SideMenu-Icon {
+  display: inline-block;
+  margin-right: 3px;
+  margin-left: 7px;
+}
+
+.SideMenu-Call {
+  padding: 0;
+}
+
+.SideMenu-Email,
+.SideMenu-Call {
+  padding-bottom: 4px;
+
+  color: $color_blue;
+  font-weight: bold;
+
+  border-bottom: 1px dotted $color_blue;
+
+  &:hover {
+    color: $color_yellow;
+    border-color: $color_yellow
+  }
+}

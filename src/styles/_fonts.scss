@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'Impact';
+  src: url('./assets/fonts/Impact.ttf') format('truetype'),
+    url('./assets/fonts/Impact.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/montserrat.woff') format('woff'),
+    url('./assets/fonts/montserrat.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: wrap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/montserratbold.woff') format('woff'),
+    url('./assets/fonts/montserratbold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: wrap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/montserratblack.woff') format('woff'),
+    url('./assets/fonts/montserratblack.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: wrap;
+}

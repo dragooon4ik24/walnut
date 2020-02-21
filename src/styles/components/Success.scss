@@ -1,0 +1,81 @@
+.Success-Content {
+  position: relative;
+
+  width: 90%;
+  padding: 20px;
+
+  color: white;
+
+  border-radius: 16px;
+  background-image: linear-gradient(135deg, $color_blue, $color_dark-blue);
+
+  @include tablet {
+    width: 600px;
+    padding: 56px 43px 57px;
+  }
+}
+
+.Success-Close {
+  right: 20px;
+  top: 20px;
+
+  &::before,
+  &::after {
+    background-color: white;
+  }
+
+  @include tablet {
+    right: 43px;
+    top: 63px;
+  }
+}
+
+.Success-Title {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 15px;
+
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+
+  @include tablet {
+    width: 60%;
+    margin-bottom: 23px;
+
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+.Success-Info {
+  margin-bottom: 15px;
+
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+
+  @include tablet {
+    margin-bottom: 30px;
+
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.Success-Ok {
+  display: block;
+  width: 62px;
+  margin: 0 auto;
+}
+
+.Success-Ok img {
+  width: 50px;
+  height: 37px;
+
+  @include tablet {
+    width: 62px;
+    height: 46px;
+  }
+}

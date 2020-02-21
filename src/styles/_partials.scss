@@ -1,0 +1,153 @@
+.VisuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  bottom: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.Container {
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @include tablet {
+    padding: 0 39px;
+  }
+
+  @include desktop {
+    max-width: 1360px;
+    padding: 0 35px;
+  }
+}
+
+.BoldText {
+  font-weight: bold;
+}
+
+.Overlay {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-color: rgba(0, 0, 0, 0.3);
+
+  opacity: 0;
+
+  &_shown {
+    opacity: 1;
+    z-index: 100;
+  }
+
+  &_hide {
+    opacity: 0;
+    z-index: -1;
+    // transition: 0.2s;
+  }
+
+  .SideMenu & {
+    &_shown {
+      transition: 0.2s;
+    }
+
+    &_hide {
+      transition: 0.2s;
+    }
+  }
+}
+
+.ButtonClose {
+  position: absolute;
+
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+
+    width: 22px;
+    height: 3px;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+
+    width: 22px;
+    height: 3px;
+  }
+
+}
+
+.InputWrapper {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    z-index: 1;
+    content: '';
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(white, 0.25);
+    border-radius: 10px;
+  }
+
+  &:hover::before {
+    background-color: rgba(white, 0.4);
+  }
+
+  &:hover input::placeholder {
+    color: white;
+  }
+}
+
+.Input {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  padding: 10px 24px;
+
+  font-size: 14px;
+  line-height: 24px;
+  color: white;
+
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 2px solid transparent;
+
+  &::placeholder {
+    color: rgba(white, 0.3);
+  }
+}
+
+.Field_invalid {
+  border: 2px solid rgba(red, .4);
+}
+
+.Field_invalid[type=checkbox]~label::before {
+  border: 2px solid red;
+}
+
+.Input:focus {
+  box-shadow: 0px 0px 12px rgba($color_blue, 0.7);
+}
