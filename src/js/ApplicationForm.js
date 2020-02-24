@@ -1,6 +1,6 @@
 import {handleButtonClose} from './handlers'
 import Success from './Success'
-import {validateForm, clearInputs} from './utils'
+import {validateForm} from './utils'
 
 const applicationModal = document.querySelector('.Modals-Application')
 const applicationCloseButton = document.querySelector('.Application-Close')
@@ -12,13 +12,11 @@ const formCheckbox = document.querySelector('.Application-Checkbox')
 const inputs = [nameInput, telInput, formCheckbox]
 
 applicationCloseButton.addEventListener('click', () => {
-  handleButtonClose(applicationModal)
-  clearInputs(inputs)
+  handleButtonClose(applicationModal, inputs)
 })
 const checkCompletedSuccessfully = () => {
   Success().showSuccess()
-  handleButtonClose(applicationModal)
-  clearInputs(inputs)
+  handleButtonClose(applicationModal, inputs)
 }
 validateForm(form, checkCompletedSuccessfully, ...inputs)
 
@@ -26,7 +24,7 @@ applicationModal.addEventListener('click', e => {
   if (e.target !== applicationModal) {
     return
   }
-  handleButtonClose(applicationModal)
+  handleButtonClose(applicationModal, inputs)
 })
 
 export default function showApplication() {
