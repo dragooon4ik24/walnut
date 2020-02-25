@@ -75,7 +75,7 @@ module.exports = {
   },
   output: {
     filename: filename('js'),
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
   },
   resolve: {
     extensions: ['.js', '.scss'],
@@ -100,15 +100,15 @@ module.exports = {
     new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, 'src/assets/img/*'),
-        to: path.resolve(__dirname, 'dist'),
+        to: path.resolve(__dirname, 'docs'),
       },
       {
         from: path.resolve(__dirname, 'src/assets/img/icons/*'),
-        to: path.resolve(__dirname, 'dist'),
+        to: path.resolve(__dirname, 'docs'),
       },
       {
         from: path.resolve(__dirname, 'src/assets/fonts/*'),
-        to: path.resolve(__dirname, 'dist'),
+        to: path.resolve(__dirname, 'docs'),
       },
     ]),
     new MiniCssExtractPlugin({
