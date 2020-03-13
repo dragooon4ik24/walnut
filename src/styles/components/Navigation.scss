@@ -82,7 +82,7 @@
 
   &:hover {
     .Navigation-Tel_blue {
-      color: $color_yellow;
+      @include hover-yellow($border: false);
     }
   }
 
@@ -141,7 +141,5 @@
 .Navigation-Menu a {
   color: white;
 
-  &:hover {
-    color: $color_yellow;
-  }
+  @include hover-yellow($border: false);
 }

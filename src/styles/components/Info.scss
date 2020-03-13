@@ -19,10 +19,7 @@
 
   border-bottom: 1px dotted $color_blue;
 
-  &:hover {
-    color: $color_yellow;
-    border-color: $color_yellow
-  }
+  @include hover-yellow($border: true);
 }
 
 .Info-Button {
@@ -32,8 +29,5 @@
 
   border-bottom: 1px dotted $color_blue;
 
-  &:hover {
-    color: $color_yellow;
-    border-color: $color_yellow
-  }
+  @include hover-yellow($border: true);
 }

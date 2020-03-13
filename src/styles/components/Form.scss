@@ -127,6 +127,14 @@
   border-radius: 3px;
 }
 
+.Form-Privacy {
+  color: $color_blue;
+
+  border-bottom: 1px solid $color_blue;
+
+  @include hover-yellow($border: true);
+}
+
 .Form-Button {
   display: block;
   width: 100%;

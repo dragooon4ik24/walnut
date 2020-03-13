@@ -9,3 +9,13 @@
     @content;
   }
 }
+
+@mixin hover-yellow($border) {
+  &:hover {
+    color: $color_yellow;
+
+    @if $border {
+      border-color: $color_yellow;
+    }
+  }
+}

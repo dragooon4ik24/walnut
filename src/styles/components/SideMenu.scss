@@ -11,7 +11,7 @@
 
   width: 310px;
   height: 100%;
-  padding: 0 27px;
+  padding: 0 27px 30px;
 
   font-size: 12px;
   line-height: 16px;
@@ -19,6 +19,7 @@
   transform: translateX(-100%);
   background-color: white;
   z-index: 100;
+  overflow: auto;
 
   .Overlay_shown & {
     transform: translateX(0);
@@ -58,9 +59,7 @@
 }
 
 .SideMenu-List a {
-  &:hover {
-    color: $color_yellow;
-  }
+  @include hover-yellow($border: false);
 }
 
 .SideMenu-List li:not(:last-child) {
@@ -115,8 +114,5 @@
 
   border-bottom: 1px dotted $color_blue;
 
-  &:hover {
-    color: $color_yellow;
-    border-color: $color_yellow
-  }
+  @include hover-yellow($border: true);
 }
